@@ -13,7 +13,6 @@ array1.forEach(element => {
 console.log("The Sum of the elements in an Array is :", sum);
 
 
-
 // array.forEach(element => { ... });: This line iterates over each element of the array using the forEach() method. For each element, the code inside the curly braces { ... } will be executed.
 
 // sum += element;: This line adds the value of each element to the sum variable. += is the addition assignment operator, which adds the value of the right operand (in this case, element) to the value of the left operand (in this case, sum) and assigns the result to the left operand (updating sum).
