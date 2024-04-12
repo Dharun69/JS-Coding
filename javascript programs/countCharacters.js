@@ -1,6 +1,7 @@
 // js program to count the no of characters in the given 2 strings
 
 function countCharacters(str1, str2) {
+  
   const length1 = str1.length;
   const length2 = str2.length;
 

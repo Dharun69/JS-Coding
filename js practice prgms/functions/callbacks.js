@@ -35,9 +35,7 @@ add(17, 30, logResult);
 // practice
 
 function add(a, b, callback) {
-
     const res = a + b;
-
     callback(res);
 }
 
