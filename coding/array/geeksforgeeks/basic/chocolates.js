@@ -11,6 +11,7 @@ function chocolates(arr) {
     }
 
     return arr[first];
+    // return Math.min(...arr);
 }
 
 let arr = [5, 9, 2, 6];
