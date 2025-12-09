@@ -1,8 +1,12 @@
 
 
+let arr = [3, 1, 3, 4, 2];
+let freq = {};
+let missing = -1;
+let duplicate = -1;
 
-let arr = [7, 1, 2, 3, 4, 5, 6];
-// output: [7,1,6,2,5,3,4]
+for (let num of arr) {
+    freq[num] = (freq[num] || 0) + 1;
+}
 
-
-console.log(alternateSort(arr));
+console.log(freq);

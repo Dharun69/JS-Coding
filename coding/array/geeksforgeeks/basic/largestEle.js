@@ -12,8 +12,8 @@ largestEle();
 
 function secondLargestNumber() {
     let arr = [4, 6, 8, 3, 9, 5];
-    let max = arr[0];
-    let secondMax = arr[0]; // Initialize secondMax with the first element
+    let max = -Infinity;
+    let secondMax = -Infinity;
 
     // Find the maximum number in the array
     for (let i = 0; i < arr.length; i++) {
@@ -31,15 +31,14 @@ function secondLargestNumber() {
 secondLargestNumber();
 
 function minNum() {
-    let min = [12,5,7,8];
+    let min = [12, 5, 7, 8];
     let minValue = min[0];
 
-    for(let i=0; i<min.length; i++) {
-        if(min[i] < minValue){
-            minValue = min[i]
+    for (let i = 0; i < min.length; i++) {
+        if (min[i] < minValue) {
+            minValue = min[i];
         }
     }
     console.log(minValue);
-    
 }
 minNum();

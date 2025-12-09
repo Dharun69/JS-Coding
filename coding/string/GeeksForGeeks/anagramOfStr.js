@@ -51,3 +51,22 @@ console.log(remAnagram("bcadeh", "hea")); // Output: 3
 //         return delections;
 
 //     }
+
+function isAnagram(str1, str2) {
+    let freq = {};
+
+    for (let ch of str1) {
+        freq[ch] = (freq[ch] || 0) + 1;
+    }
+
+    for (let ch of str2) {
+        if (!freq[ch]) return false;
+        freq[ch]--;
+    }
+
+    return true;
+}
+
+console.log(isAnagram("listen", "silent")); // true
+console.log(isAnagram("race", "care")); // true
+console.log(isAnagram("hello", "world")); // false

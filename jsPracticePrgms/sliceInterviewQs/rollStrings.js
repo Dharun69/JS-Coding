@@ -9,22 +9,21 @@
 
 // Approach 1
 
-function rollCharacter(target){
-    let ele=String.fromCharCode(parseInt(target.charCodeAt(0))+1)
-    return ele
+function rollCharacter(target) {
+    let ele = String.fromCharCode(parseInt(target.charCodeAt(0)) + 1);
+    return ele;
 }
-function modifyString(target,index){
-    target=target.split("")
-    index.forEach(ele=>{
-        for(let i=0;i<ele;i++){
-            target[i]=rollCharacter(target[i])
+function modifyString(target, index) {
+    target = target.split("");
+    index.forEach((ele) => {
+        for (let i = 0; i < ele; i++) {
+            target[i] = rollCharacter(target[i]);
         }
-    })
-    return target.join("")
+    });
+    return target.join("");
 }
-let result=modifyString("bca",[1,2,3])
+let result = modifyString("bca", [1, 2, 3]);
 console.log(result);
-
 
 // Approach 2
 
@@ -35,20 +34,18 @@ let inputStr = "bca";
 let roll = [1, 2, 3];
 
 // Split the input string into an array of characters
-let letter = inputStr.split('');
+let letter = inputStr.split("");
 
 // Initialize a variable to store the result
 let result1 = "";
 
 // Loop through each element in the 'roll' array
 for (let i = 0; i < roll.length; i++) {
-
     // Get the current number of characters to roll
     let n = roll[i];
 
     // Loop 'n' times for each rolling operation
     for (let j = 0; j < n; j++) {
-
         // Roll the character by incrementing its ASCII code by 1
         // The charCodeAt() method returns the code of the character at a specified index in a string
         letter[j] = String.fromCharCode(letter[j].charCodeAt(0) + 1);
@@ -56,5 +53,5 @@ for (let i = 0; i < roll.length; i++) {
 }
 
 // Join the array of characters back into a string
-result1 = letter.join('');
+result1 = letter.join("");
 console.log("The result is : ", result1);
