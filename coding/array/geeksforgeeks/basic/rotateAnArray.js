@@ -1,0 +1,3 @@
+function leftRotate(arr, d) {
+    
+}
