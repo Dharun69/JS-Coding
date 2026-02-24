@@ -9,7 +9,6 @@ function frequencyCounter(str) {
         }
     }
     return freqMap;
-
 }
 
 let str = "coding practice";
