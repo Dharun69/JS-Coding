@@ -12,6 +12,7 @@ function addAllNumbers(str) {
     return sum;
 }
 
+
 let str = "dh47dg6jd39jefh8df";
 console.log(addAllNumbers(str));
 
