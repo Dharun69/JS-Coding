@@ -25,5 +25,6 @@ let frequencies = calculateFrequency(arr);
 console.log("Frequency of elements in an array is :", frequencies);
 
 
+
 // This program defines a function calculateFrequency which takes an array as input and returns an object where the keys are the elements of the array and the values are the frequencies of those elements. You can call this function with any array to get the frequency of its elements.
 

@@ -17,54 +17,39 @@
 // value but there is a need of modifying 2 characters. 
 // i.e. g and f in str 2.
 
-function areAnagrams(str1, str2, k) {
+function areKAnagrams(str1, str2, k){
 
-    if(str1.length !== str2.length) {
-        return false;
+    if(str1.length !== str2.length){
+        return "No";
     }
 
-    for (let i = 0; i < str1.length; i++) {
+    let map = new Map();
 
-        let charFound = false;
+    // count characters of str1
+    for(let ch of str1){
+        map.set(ch, (map.get(ch) || 0) + 1);
+    }
 
-        for (let j = 0; j < str2.length; j++) {
-            
-            if (str1[i] === str2[j]) {
-
-            [str2[i], str2[j]] = [str2[j], str2[i]];
-            charFound = true;
-            break;
-          }
-        }
-        if (!charFound) {
-          return false;
+    // reduce count using str2
+    for(let ch of str2){
+        if(map.has(ch) && map.get(ch) > 0){
+            map.set(ch, map.get(ch) - 1);
         }
     }
-    return true;
+
+    // count remaining characters
+    let changes = 0;
+
+    for(let value of map.values()){
+        changes += value;
+    }
+
+    if(changes <= k){
+        return "Yes";
+    } else {
+        return "No";
+    }
 }
 
-//     const sortedStr1 = str1.split('').sort();
-//     const sortedStr2 = str2.split('').sort();
-
-//     let diff = 0;
-    
-//     for (let i = 0; i < sortedStr1.length; i++) {
-        
-//         if (sortedStr1[i] !== sortedStr2[i]) {
-//             diff++;
-//         }
-//     }
-//     return diff <= k;
-// }
-
-const str1 = "anagram";
-const str2 = "grammar";
-const k1 = 3;
-
-console.log(areAnagrams(str1, str2, k1));
-
-const str3 = "geeks";
-const str4 = "eggkf";
-const k2 = 1;
-
-console.log(areAnagrams(str3, str4, k2));
+console.log(areKAnagrams("anagram","grammar",3));
+console.log(areKAnagrams("geeks","eggkf",1));

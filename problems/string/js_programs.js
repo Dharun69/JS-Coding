@@ -86,8 +86,7 @@ console.log(result);
 function areAnagram1(str1, str2){
     if (str1.length === 0 && str2.length === 0) {
         throw new Error("Input invalid");
-    }
-
+    }    
     // Convert strings to arrays, sort them, and then compare
     const sortedStr1 = [...str1].sort().join('');
     const sortedStr2 = [...str2].sort().join('');

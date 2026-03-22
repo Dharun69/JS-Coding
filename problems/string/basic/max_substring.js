@@ -27,3 +27,36 @@ function maxLengthSubstring(str) {
 const inputString = "abcabcbb";
 const result = maxLengthSubstring(inputString);
 console.log("The output is :", result);
+
+
+
+
+
+function maxLengthSubstring1(str) {
+
+    let set = new Set();
+    let left = 0; 
+    let maxString = "";
+
+    for(let right = 0; right < str.length; right++) {
+
+        while(set.has(str[right])) {
+            set.delete(str[left])
+            left++;
+        }
+
+    set.add(str[right])
+    let current = str.substring(left, right+1);
+
+    if(current.length > maxString.length) {
+        maxString = current;
+    }
+
+    }
+
+
+    return maxString;
+
+}
+
+console.log(maxLengthSubstring1("abcabcbb"));
