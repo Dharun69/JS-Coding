@@ -30,3 +30,20 @@ const rotatedArray = rotateArray(inputArray, rotationFactor);
 console.log(rotatedArray); 
 
 // Output: [4, 5, 1, 2, 3]
+
+
+
+function rotateKtimes(arr, k) {
+
+    let n = arr.length;
+
+    k = k % n;
+
+    let firstPart = arr.slice(-k);
+
+    let lastPart = arr.slice(0, n-k);
+
+    return [...firstPart, ...lastPart];
+}
+
+console.log(rotateKtimes(inputArray, rotationFactor));

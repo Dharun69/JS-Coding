@@ -4,7 +4,7 @@
 
 function revArray(arr) {
 
-    let reversed_array = [ ];
+    let reversed_array = [];
 
     for(let i = arr.length - 1; i >= 0; i--) {
         // reversed_array = reversed_array + arr[i]; // return type is string
