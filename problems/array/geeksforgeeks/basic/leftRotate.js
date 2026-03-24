@@ -14,4 +14,14 @@ function leftRotate(arr, k) {
 
 let arr = [1, 2, 3, 4, 5, 6, 7];
 let k = 2;
-console.log(leftRotate(arr, k));
+// console.log(leftRotate(arr, k));
+
+
+
+function leftRotate1(arr, k) {
+    let n = arr.length;
+    k = k % n;
+    return arr.slice(k).concat(arr.slice(0, k));
+}
+
+console.log(leftRotate1(arr, k));

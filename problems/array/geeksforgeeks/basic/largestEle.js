@@ -1,6 +1,6 @@
 function largestEle() {
     let arr = [1, 8, 7, 56, 90];
-    let maxValue = 0;
+    let maxValue = Number.NEGATIVE_INFINITY;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > maxValue) {
             maxValue = arr[i];

@@ -53,3 +53,18 @@ let reversedNumber1 = rev(num);
 
 console.log("Original Number:", num1);
 console.log("Reversed Number:", reversedNumber1);
+
+
+function rev1(num) {
+    let reversed = 0;
+
+    while (num > 0) {
+        let digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num = Math.floor(num / 10);
+    }
+
+    return reversed;
+}
+
+console.log(rev1(12345)); // 54321

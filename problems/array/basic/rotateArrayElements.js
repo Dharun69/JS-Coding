@@ -23,7 +23,7 @@ function rotateArray(array, rotationFactor) {
 
 // Example usage:
 const inputArray = [1, 2, 3, 4, 5];
-const rotationFactor = 2;   // Define the rotation factor
+const rotationFactor = 1;   // Define the rotation factor
 
 // Rotate the inputArray by rotationFactor
 const rotatedArray = rotateArray(inputArray, rotationFactor); 
@@ -47,3 +47,12 @@ function rotateKtimes(arr, k) {
 }
 
 console.log(rotateKtimes(inputArray, rotationFactor));
+
+
+function rightRotate1(arr, k) {
+    let n = arr.length;
+    k = k % n;
+    return arr.slice(-k).concat(arr.slice(0, n-k));
+}
+
+console.log(rightRotate1(inputArray, rotationFactor));

@@ -23,4 +23,5 @@ function removeDuplicates1(arr) {
     
 
 }
-removeDuplicates1([1, 2, 3, 4, 4, 5, 6, 6])
+
+removeDuplicates1([1, 2, 3, 4, 4, 5, 6, 6]);
