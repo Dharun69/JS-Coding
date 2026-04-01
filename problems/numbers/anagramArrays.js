@@ -25,7 +25,7 @@ function groupAnagrams(words) {
 
     // Use flat() to create a single array of anagrams
     // Convert the Map's values (arrays of anagrams) into a single array
-    const flattenedAnagrams = Array.from(anagramsMap.values()).flat();
+    const flattenedAnagrams = Array.from(anagramsMap.values());
 
     // Return the flattened array of anagrams:
     return flattenedAnagrams;
